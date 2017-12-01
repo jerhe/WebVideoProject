@@ -1,0 +1,531 @@
+.rank-container {
+	border: 0;
+	margin-top: 20px;
+	zoom: 1;
+	border-radius: 4px
+}
+
+.rank-container-Box-Model {
+	padding: 0;
+	margin: 0
+}
+
+.rank-container:after {
+	content: "";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+	font-size: 0
+}
+
+.rank-container .rank-inner {
+	padding: 0;
+	margin: 0;
+	height: 40px
+}
+
+.rank-container .rank-menu {
+	padding: 0;
+	margin: 0;
+	border-bottom: 0;
+	text-align: center
+}
+
+.rank-container .rank-menu li {
+	width: 115px;
+	font-size: 18px;
+	cursor: pointer;
+	height: 40px;
+	line-height: 25px;
+	padding: 0 12px;
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin-left: 52px
+}
+
+.rank-container .rank-menu li:first-child {
+	margin-left: 0
+}
+
+.rank-container .rank-menu li.on {
+	color: #00a1d6;
+	height: 38px;
+	border-bottom: solid 2px #00a1d6
+}
+
+.rank-container .rank-menu li .rank-menu-arrow {
+	display: none;
+	background: url(/images/v3images/rank_selected.png) 0 0 no-repeat;
+	position: absolute;
+	right: -1px;
+	top: 20px;
+	width: 14px;
+	height: 30px;
+	z-index: 1
+}
+
+.rank-container .rank-menu li.on .rank-menu-arrow {
+	display: block
+}
+
+.rank-container .rank-menu li span.txt {
+	margin-left: 5px;
+	font-size: 16px
+}
+
+.rank-container .rank-icon {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	background: url(../img/icons.png) no-repeat
+}
+
+.rank-container .rank-icon.all {
+	background-position: -83px -979px
+}
+
+.rank-container .rank-menu li:hover .rank-icon.all, .rank-container .rank-menu li.on .rank-icon.all
+	{
+	background-position: -83px -979px
+}
+
+.rank-container .rank-icon.original {
+	background-position: -83px -1041px
+}
+
+.rank-container .rank-menu li:hover .rank-icon.original, .rank-container .rank-menu li.on .rank-icon.original
+	{
+	background-position: -83px -1041px
+}
+
+.rank-container .rank-icon.bangumi {
+	background-position: -83px -1107px
+}
+
+.rank-container .rank-menu li:hover .rank-icon.bangumi, .rank-container .rank-menu li.on .rank-icon.bangumi
+	{
+	background-position: -83px -1107px
+}
+
+.rank-container .rank-icon.rookie {
+	background-position: -83px -1170px
+}
+
+.rank-container .rank-menu li:hover .rank-icon.rookie, .rank-container .rank-menu li.on .rank-icon.rookie
+	{
+	background-position: -83px -1170px
+}
+
+.rank-container .rank-body {
+	min-height: 1600px;
+	background: #fff;
+	border-left: none
+}
+
+.rank-container .rank-tab-wrp {
+	zoom: 1;
+	background: #edf2f9;
+	padding: 0;
+	border-radius: 4px;
+	clear: both;
+	height: 40px
+}
+
+.rank-container .rank-tab-wrp:after {
+	content: "";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+	font-size: 0
+}
+
+.rank-container .rank-tab-wrp .rank-tab {
+	float: left
+}
+
+.rank-container .rank-tab li {
+	float: left;
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 14px;
+	margin-left: 10px
+}
+
+.rank-container .rank-tab li:first-child {
+	margin-left: 0
+}
+
+.rank-container .rank-tab .on {
+	color: #00a1d6
+}
+
+.rank-list-container .rank-list-head {
+	padding: 15px 0;
+	position: relative;
+	z-index: 10;
+	zoom: 1
+}
+
+.rank-list-container .rank-list-head:after {
+	content: "";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+	font-size: 0
+}
+
+.rank-list-container .rank-list-head .b-slt-tab li {
+	transition: none
+}
+
+.rank-list-container .rank-list-head .b-slt-tab li.disabled {
+	color: #ccc
+}
+
+#rank_newv_tab {
+	margin-right: 10px
+}
+
+.rank-list-container .rank-list-head #rank_newv_tab li {
+	margin-left: 10px
+}
+
+.rank-list-container .rank-list-head #rank_range_tab {
+	float: right
+}
+
+.rank-list-container .rank-list-head .rank-tip-wrp {
+	clear: both
+}
+
+.rank-list-container .rank-list-head .rank-tip-wrp #rank_tips {
+	display: none;
+	height: 30px;
+	background-color: #edf2f9;
+	border-radius: 4px
+}
+
+.rank-list-container .rank-list-head .rank-tip-wrp #rank_tips .b-icon {
+	margin: 0 10px 0 10px
+}
+
+.rank-list-container .rank-list-head .rank-tip-wrp #rank_tips .tip-txt {
+	line-height: 30px;
+	vertical-align: middle
+}
+
+.rank-list-container .rank-list {
+	position: relative
+}
+
+.rank-list-container .rank-list .no-data {
+	text-align: center;
+	border: 0;
+	line-height: 200px;
+	height: 200px
+}
+
+.rank-list-container .rank-list-head .rank-loading {
+	border: 0;
+	text-align: center;
+	position: absolute;
+	top: 15px;
+	right: 100px;
+	line-height: 30px;
+	height: 30px;
+	margin: 0;
+	z-index: 0
+}
+
+.rank-list-container .rank-list li {
+	border-bottom: solid 1px #e5e9ef
+}
+
+.rank-list-container .rank-list li .rank-item {
+	position: relative;
+	height: 100%;
+	transition: .2s
+}
+
+.rank-list-container .rank-list li .rank-item:hover {
+	box-shadow: 0 3px 3px #e5e9ef
+}
+
+.rank-list-container .rank-list li .rank-item:hover .title {
+	color: #00a1d6
+}
+
+.rank-list-container .rank-list li .num {
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 70px;
+	height: 90px;
+	line-height: 90px;
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+	color: #b8c0cc;
+	font-family: simhei
+}
+
+.rank-list-container .rank-list li .preview {
+	width: 114px;
+	float: left;
+	border-radius: 4px;
+	overflow: hidden
+}
+
+.rank-list-container .rank-list li .content {
+	padding: 20px 0 0 70px
+}
+
+.rank-list-container .rank-list li .content .watch-later {
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	background-image: url(/images/base/watchlater-1.png);
+	transition: opacity .2s;
+	opacity: 0;
+	top: 64px;
+	left: 156px
+}
+
+.rank-list-container .rank-list li .content .watch-later.on {
+	background-image: url(/images/base/watchlater-2.png)
+}
+
+.rank-list-container .rank-list li .content:hover .watch-later {
+	opacity: 1
+}
+
+.rank-list-container .rank-list li .preview img {
+	width: 100%;
+	height: 70px;
+	display: block;
+	margin: 0 auto
+}
+
+.rank-list-container .rank-list li .info {
+	margin-left: 130px;
+	position: relative;
+	height: 70px;
+	padding-right: 10px;
+	padding-bottom: 20px
+}
+
+.rank-list-container .rank-list li .title {
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	font-weight: bold;
+	font-size: 14px;
+	color: #222
+}
+
+.rank-list-container .rank-list li .detail {
+	margin-top: 20px;
+	color: #99a2aa
+}
+
+.rank-list-container .rank-list li .detail .data-box {
+	margin-right: 20px;
+	width: 80px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+
+.rank-list-container .rank-list li .detail .data-box .b-icon {
+	vertical-align: top;
+	margin-right: 5px;
+	margin-top: 1px
+}
+
+.rank-list-container .rank-list li .detail .data-box.author {
+	width: 140px;
+	color: #99a2aa
+}
+
+.rank-list-container .rank-list li .detail .data-box.author:hover {
+	color: #00a1d6
+}
+
+.rank-list-container .rank-list li a:hover {
+	color: #00a1d6
+}
+
+.rank-list-container .rank-list li .pts {
+	position: absolute;
+	bottom: 40px;
+	right: 10px;
+	color: #b8c0cc;
+	height: 20px;
+	line-height: 20px;
+	text-align: center
+}
+
+.rank-list-container .rank-list li .pts em, .rank-list-container .rank-list li .pts span
+	{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	text-align: center
+}
+
+.rank-list-container .rank-list li .pts div {
+	min-width: 50px;
+	padding: 0 5px;
+	color: #00a1d6;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 12px
+}
+
+.rank-list-container .rank-list.bangumi li .num {
+	height: 140px;
+	line-height: 140px
+}
+
+.rank-list-container .rank-list.bangumi li .info {
+	height: 120px;
+	margin-left: 106px
+}
+
+.rank-list-container .rank-list.bangumi li .info .bangumi-info {
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	color: #99a2aa
+}
+
+.rank-list-container .rank-list.bangumi li .info .bangumi-info span {
+	color: #fb7299
+}
+
+.rank-list-container .rank-list.bangumi li .preview {
+	width: 90px
+}
+
+.rank-list-container .rank-list.bangumi li .preview img {
+	height: 120px
+}
+
+.rank-list-container .rank-list.bangumi li .title {
+	height: 42px;
+	line-height: 42px;
+	font-size: 18px
+}
+
+.rank-list-container .rank-list.bangumi li .detail {
+	margin-top: 18px
+}
+
+.rank-list-container .rank-list.bangumi li .detail .data-box {
+	width: auto;
+	margin-right: 36px;
+	line-height: 14px
+}
+
+.rank-list-container .rank-list.bangumi li .detail .data-box.zf {
+	color: #99a2aa
+}
+
+.rank-list-container .rank-list.bangumi li .pts {
+	bottom: 90px
+}
+
+.data-box {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: top;
+	height: 14px;
+	line-height: 12px
+}
+
+.data-box a {
+	display: block
+}
+
+.rank-tab-select {
+	float: right;
+	margin-top: 8px;
+	margin-right: 16px
+}
+
+.rank-list-container .rank-list .info-border {
+	border-bottom: 1px solid #e5e9ef
+}
+
+.rank-list-container .rank-list .other {
+	margin-left: 130px;
+	font-size: 12px;
+	height: 52px;
+	overflow: hidden;
+	font-size: 14px;
+	transition: height .3s
+}
+
+.rank-list-container .rank-list .other a {
+	margin-right: 20px;
+	font-weight: bold;
+	color: #222;
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: 640px;
+	display: inline-block;
+	vertical-align: top;
+	text-overflow: ellipsis
+}
+
+.rank-list-container .rank-list .other span {
+	color: #99a2aa;
+	margin-right: 5px
+}
+
+.rank-list-container .rank-list .other strong {
+	color: #00a1d6
+}
+
+.rank-list-container .rank-list .other p {
+	margin: 20px 0
+}
+
+.rank-list-container .rank-list .other.open {
+	height: auto
+}
+
+.rank-list-container .rank-list .more-data {
+	display: inline-block;
+	margin: 0 0 18px 130px;
+	font-size: 14px;
+	color: #00a1d6
+}
+
+.rank-list-container .rank-list .more-data:hover {
+	color: #00b5e5
+}
+
+.rank-list-container .rank-list .more-data:hover i {
+	background-position: -27px -93px
+}
+
+.rank-list-container .rank-list .more-data i {
+	display: inline-block;
+	margin-left: 10px;
+	width: 11px;
+	height: 6px;
+	background: url(/images/icons-rank.png) -27px -29px no-repeat
+}

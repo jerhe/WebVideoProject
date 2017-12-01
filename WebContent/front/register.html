@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+		<meta name="referrer" content="always">
+		
+		<title>哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ 乾杯~ - bilibili</title>
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<meta name="description" content="bilibili是一家弹幕站点,大家可以在这里找到许多的欢乐.">
+		<meta name="keywords" content="B站 弹幕 字幕 AMV MAD MTV ANIME 动漫 动漫音乐 游戏 游戏解说 ACG galgame 动画 番组 新番 初音 洛天依 vocaloid">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui">
+		<link rel="search" type="application/opensearchdescription+xml" href="https://static.hdslb.com/opensearch.xml" title="哔哩哔哩">
+
+		<link media="all" href="css/register.css" type="text/css" rel="stylesheet">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>	
+	
+	</head>
+
+
+	<body>
+		<div class="z-top-container">
+			<div class="z_top b-header-blur">
+				<div class="b-header-mask-wrp">
+					<div class="b-header-mask-bg"></div>
+					<div class="b-header-mask"></div>
+				</div>
+				<div class="z_header">
+					<div class="z_top_nav">
+						<ul>
+							<li class="home"><a class="i-link" href="#"><span>主站</span></a></li>
+							<li class="hbili"><a class="i-link" href="#" title="画友">画友</a></li>
+							<li class="b-gc" hasframe="true"><a class="i-link" href="#" title="游戏中心">游戏中心</a>
+								<div class="i_div game" data-frame="game"></div>
+							</li>
+							<li class="live" hasframe="true"><a class="i-link" target="_top" href="#" title="直播">直播</a>
+								<div class="i_div stream" data-frame="stream"></div>
+							</li>
+							<li class="b-ml"><a class="i-link" target="_top" href="#" title="会员购">会员购</a></li>
+							<li class="b-zb"><a class="i-link" target="_top" href="#" title="周边">周边</a></li>
+							<li class="shouji"><a class="i-link" target="_top" href="#" title="移动端">移动端</a>
+								<div class="mobile-p-box">
+									<div class="mobile-p-qrcode"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="uns_box">
+						<ul class="menu">
+							<li class="u-i i_user" id="i_menu_profile_btn" guest="no" i_menu="#i_menu_profile" style="display: none;"></li>
+							<li class="u-i" id="i_menu_become_vip" guest="no" i_menu="become_vip" style="display: none;"><a class="i-link" href="https://big.bilibili.com/site/big.html" target="_top">成为大会员</a></li>
+							<li class="u-i" id="i_menu_community_msg_btn" guest="no" i_menu="community_msg" style="display: none;"><a class="i-link" href="https://message.bilibili.com/" target="_top">消息</a></li>
+							<li class="u-i" id="i_menu_msg_btn" guest="no" i_menu="#dyn_wnd" style="display: none;">
+								<div class="num" id="dynamic_num_total"></div><a class="i-link" href="https://www.bilibili.com/account/dynamic" target="_top">动态</a></li>
+							<li class="u-i" id="i_menu_later_btn" guest="no" style="display: none;"><a class="i-link" href="https://www.bilibili.com/watchlater/#/list" target="_top">稍后再看</a></li>
+							<li class="u-i" id="i_menu_fav_btn" guest="no" style="display: none;"><a class="i-link" href="https://space.bilibili.com/#!/favlist" target="_top">收藏夹</a></li>
+							<li class="u-i i_user" id="i_menu_login_reg" guest="yes" style="display: list-item;">
+								<a id="login_default_face" href="#"><img class="i_face" src="img/akari.jpg"></a>
+								<div class="i_menu" id="i_menu_login">
+									<p class="tip">登录后你可以：</p>
+									<div class="img"><img src="img/danmu_001.png"><img src="img/danmu_001.png" style="left: 320px;"></div><a class="login-btn" href="https://passport.bilibili.com/login">登录</a>
+									<p class="reg">首次使用？<a href="https://passport.bilibili.com/register/phone.html">点我去注册</a></p>
+								</div>
+							</li>
+							<li class="u-i" id="i_menu_history_btn"><a class="i-link" href="#" target="_top">历史</a>
+								<div class="mini-wnd history-wnd">
+									<div class="top-login">
+										<p class="txt">登录后有更多功能哦~</p><a class="loginbtn" href="https://passport.bilibili.com/login">登录</a></div>
+									<div class="top-open-history">
+										<p class="txt">历史功能暂停中，就算看不可描述的视频也不会被记录下来了</p><a class="openbtn">前去开启</a></div>
+									<ul class="list history"></ul><a class="read-more" href="https://www.bilibili.com/account/history" target="_top">查看更多<i class="b-icon b-icon-arrow-r"></i></a></div>
+							</li>
+							<li class="u-i b-post"><a class="i-link" href="#" target="_top">投 稿</a>
+								<ul class="s-menu show-audio">
+									<li class="article"><a href="#" target="_top"><i class="b-icon b-icon-art"></i><em>专栏投稿</em><i class="new"></i></a></li>
+									<li class="audio-upload"><a href="#" target="_top"><i class="b-icon b-icon-ap"></i><em>音频投稿</em><i class="beta"></i></a></li>
+									<li><a href="#" target="_top"><i class="b-icon b-icon-vp"></i><em>视频投稿</em></a></li>
+									<li><a href="#" target="_top"><i class="b-icon b-icon-vm"></i><em>投稿管理</em></a></li>
+									<li><a href="#" target="_top"><i class="b-icon b-icon-vc"></i><em>创作中心</em></a></li>
+								</ul><i class="up-new"></i></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="login-app">
+			<div>
+				<div class="top-banner"><img src="img/title.png"></div>
+				<div class="title-line"><span class="tit">注册</span></div>
+				<div class="register-container">
+					<form id="registerForm" method="post" onsubmit="return false;" action="https://passport.bilibili.com/register/phone.html">
+						<div class="new_phone center_div">
+							<input name="dopost" value="regok" type="hidden">
+							<input name="uname" id="uname" placeholder="昵称" class="user_id_password mar_b_40px" value="" type="text">
+							<p id="unameTip" class="yzm_x mar_t_69"></p>
+						</div>
+						<div class="register-hidden-gruop">
+							
+						</div>
+						<div class="center_div">
+							<input name="userpwd" id="userpwd" placeholder="密码" class="user_id_password" type="password">
+							<p id="userpwdTip" class="yzm_x mar_t_69"></p>
+						</div>
+						<div class="register-hidden-gruop">
+							
+						</div>
+						<div class="center_div">
+							<input name="cuserpwd" id="cuserpwd"placeholder="重输密码" class="user_id_password" type="password">
+							<p id="cuserpwdTip" class="yzm_x mar_t_57"></p>
+						</div>
+					
+						<!--  <div class="new_phone center_div">
+							
+							<input name="email" id="email" placeholder="请输入邮箱号" class="user_id_password mar_b_40px" value="" type="text">
+							<p id="emailTip" class="yzm_x mar_t_69"></p>
+						</div>
+						-->
+						
+						
+							<div class="new_phone center_div">
+							
+							<input name="phone" id="phone" placeholder="请输入电话号码" class="user_id_password mar_b_40px" value="" type="text">
+							<p id="phonetip" class="yzm_x mar_t_69"></p>
+						</div>
+							<div class="register-hidden-gruop">
+							
+						</div>
+					
+						
+						<div class="center_div yzm yzm_buttom_a back-fff">
+							<input id="yzm" name="code" value="" type="text" disabled="true" style="margin: 0px">
+							<p id="yzmTip" class="yzm_x mar_t_69"></p>
+							<div id="captchCheck" class="check" style="display: none;"></div>
+							<input id="getCaptch" type="button" class="yzm_buttom" value=" 发送手机验证码 "     onClick="get_mobile_code();" style="color:white;background: rgb(0, 181, 229) none repeat scroll 0% 0%;width: 160px";
+							onmouseover="this.style.backgroundColor='rgb(0, 150, 230)'"; onmouseout="this.style.backgroundColor='rgb(0, 180, 280)'"> 
+							<!-- <a id="getCaptch" class="yzm_buttom" onclick="get_mobile_code();" >点击获取</a> -->
+					
+					
+							<p class="yzm_x"></p>
+						</div>
+						
+						<div class="register-hidden-gruop">
+							<div class="center_div pc-register-descript">
+								<label>
+									<input name="agree" id="agree" value="1" class="m-r-10" type="checkbox"> 我已同意
+									<a target="_top" href="https://passport.bilibili.com/register/licence">《SP IMAX弹幕网用户使用协议》</a>和<a target="_top" href="http://www.bilibili.com/html/help.html#q">《SP IMAX弹幕网账号中心规范》</a></label>
+							</div>
+						</div>
+						<input value="注册" id="register" class="next_step center_div mar_t_120 ys-a" type="submit">
+						<div class="register-hidden-gruop text-right"><a href="index.html">已有账号，直接登录&gt;</a></div>
+					</form>
+					<!---->
+					<!---->
+				</div>
+			</div>
+		</div>
+		<div class="footer bili-footer">
+			<div class="footer-wrp">
+				<div class="footer-cnt clearfix">
+					<!-- <ul class="boston-postcards">
+						<li>
+							<div class="tips">bilibili</div>
+							<div class="cards"><a target="_top" href="https://www.bilibili.com/blackboard/aboutUs.html">关于我们</a></div>
+							<div class="cards"><a target="_top" href="https://www.bilibili.com/blackboard/friends-links.html">友情链接</a></div>
+							<div class="cards"><a target="_top" href="https://bmall.bilibili.com/#!/">哔哩哔哩周边</a></div>
+							<div class="cards"><a target="_top" href="https://www.bilibili.com/blackboard/contact.html">联系我们</a></div>
+							<div class="cards"><a target="_top" href="https://www.bilibili.com/blackboard/join.html">加入我们</a></div>
+							<div class="cards"><a target="_top" href="https://account.bilibili.com/site/ident.html">官方认证</a></div>
+						</li>
+						<li>
+							<div class="tips">传送门</div>
+							<div class="cards"><a target="_top" href="https://www.bilibili.com/blackboard/help.html">帮助中心</a></div>
+							<div class="cards"><a target="_top" href="https://www.bilibili.com/video/av120040/">高级弹幕</a></div>
+							<div class="cards"><a target="_top" href="https://www.bilibili.com/blackboard/activity_list.html">活动专题页</a></div>
+							<div class="cards"><a target="_top" href="https://www.bilibili.com/blackboard/copyright.html">侵权申诉</a></div>
+							<div class="cards"><a target="_top" href="https://account.bilibili.com/answer/addq">分院帽计划</a></div>
+							<div class="cards"><a target="_top" href="https://activity.bilibili.com/">活动中心</a></div>
+							<div class="cards"><a target="_top" href="http://link.acg.tv/">用户反馈论坛</a></div>
+							<div class="cards"><a target="_top" href="http://h.bilibili.com/wallpaper?action=list">壁纸站</a></div>
+							<div class="cards"><a target="_top" href="http://www.bilibili.com/html/cele.html">名人堂</a></div>
+						</li>
+						<li>
+							<div class="block right">
+								<a target="_top" href="https://app.bilibili.com/">
+									<div class="phone">
+										<div class="pic"></div><em>手机端下载</em>
+										<div class="qrcode-box-wrp">
+											<div class="qrcode-box qrcode-app">
+												<div class="qrcode-box-arrow"></div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a target="_top" href="http://weibo.com/bilibiliweb">
+									<div class="weibo">
+										<div class="pic"></div><em>新浪微博</em>
+										<div class="qrcode-box-wrp">
+											<div class="qrcode-box qrcode-weibo">
+												<div class="qrcode-box-arrow"></div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a id="weixin">
+									<div class="weixin">
+										<div class="pic"></div><em>官方微信</em>
+										<div class="qrcode-box-wrp bigvip-qrcode">
+											<div class="qrcode-box qrcode-weixin">
+												<div class="qrcode-box-arrow"></div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul> -->
+					<div class="partner">
+						<div class="block left" style="padding-top: 0px;">
+							<div class="partner-banner"></div>
+						</div>
+						<div class="block left" style="margin: 0px 68px 0px 115px; line-height: 24px; float: none;">
+							<p>广播电视节目制作经营许可证：<span>（沪）字第1248号</span> | 网络文化经营许可证：<span>沪网文[2013]0480-056号</span> | 信息网络传播视听节目许可证：<span>0910417</span> | 互联网ICP备案：<span>沪ICP备13002172号-3</span> 沪ICP证：<span>沪B2-20100043</span> | 违法不良信息举报邮箱：help@bilibili.com | 违法不良信息举报电话：4000233233转3</p>
+							<p><a href="http://www.shjbzx.cn/" target="_top"><i class="icons-footer icons-footer-report"></i><span> 上海互联网举报中心</span></a> |<a href="http://jb.ccm.gov.cn/" target="_top">12318 全国文化市场举报网站</a> |
+								<a target="_top" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502001911"><img src="img/beiantubiao.png" style="vertical-align: top;"> 沪公网安备 31011502001911号 |</a><a href="mailto:userreport@bilibili.com">儿童色情信息举报专区</a></p>
+							<p><a href="http://report.12377.cn:13225/toreportinputNormal_anis.do" target="_top">网上有害信息举报专区：<img src="img/12377.png" style="vertical-align: sub;" width="16" height="16"> 中国互联网违法和不良信息举报中心</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js">	</script>
+	 <script type="text/javascript">
+			$(function(){
+				var ok1=false;
+				var ok2=false;
+				var ok3=false;
+				//var ok4=false;
+				var ok5=false;
+				$("#uname").blur(function(){
+					if($(this).val().length==0){
+						$("#unameTip").html("昵称不能为空！");
+					}else{
+						$("#unameTip").html(" ");
+						ok1=true;
+					}
+
+				});
+			   $("#userpwd").blur(function(){
+					if($(this).val().length<6){
+						$("#userpwdTip").html("密码不能小于六位！");
+					}else{
+						$("#userpwdTip").html(" ");
+						ok2=true;
+					}
+
+				});
+			   
+			   $("#yzm").blur(function(){
+					if($(this).val().length!=6){
+						$("#yzmTip").html("请输入正确的验证码");
+					}else{
+						$("#yzmTip").html(" ");
+						ok5=true;
+					}
+
+				});
+			   
+				  $("#cuserpwd").blur(function(){
+					if($(this).val()!=$("#userpwd").val()){
+						$("#cuserpwdTip").html("两次密码不一致！");
+					}else{
+						$("#cuserpwdTip").html(" ");
+						ok3=true;
+					}
+				});
+				//var regem = new RegExp("^[A-Za-z0-9]{6,}[@][A-Za-z0-9]{2,}[.][A-Za-z0-9]{2,}$");
+				 // $("#email").blur(function(){
+				//	if(!regem.test($(this).val())){
+				//		$("#emailTip").html("亲，你的邮箱格式错误哦！");
+				//	}else{
+				//		$("#emailTip").html(" ");
+				//		ok4=true;
+				//	}
+				//});
+				$("#register").click(function(){
+					if($("#agree").is(":checked")){
+						if(ok1 && ok2 && ok3  && ok5){
+							alert("注册成功!");
+						}else{
+							alert("请填写完信息！");
+						}
+					}else{
+						alert("未同意本网站协议和规范！");
+					}
+				});
+				
+				
+			});
+//		
+		</script> 
+	
+	
+<!-- 手机验证码的js -->
+	<script type="text/javascript" src="./js/jquery.js"></script>
+<script language="javascript">
+
+
+
+//手机验证
+    var a="";
+	function get_mobile_code(){
+		
+        $.post('sms.jsp', {mobile:jQuery.trim($('#phone').val())}, function(msg) {
+          var ok1=false;
+        	$("#phone").blur(function(){
+				if($(this).val().length==0){
+					$("#phonetip").html("昵称不能为空！");
+				}
+				else if (/^1\d{10}$/g.test($(this).val())==false) {
+					$("#phonetip").html("号码格式为1**********的11位数字");
+				}
+				else{
+					$("#phonetip").html(" ");
+					ok1=true;
+				}
+
+			});
+        	if($("#phone").val().length==0){
+				$("#phonetip").html("手机号不能为空！");
+			}
+			else if (/^1\d{10}$/g.test($("#phone").val())==false) {
+				$("#phonetip").html("号码格式为1**********的11位数字");
+			}
+			else{
+				$("#phonetip").html(" ");
+				ok1=true;
+			}
+        	
+			a=parseInt(msg);
+			if (ok1) {
+				RemainTime();
+				document.getElementById('yzm').disabled = false;
+			}
+			/* if (/^13\d{9}$/g.test($('#phone').val())) {
+				alert("11111")
+			}
+			else{
+				alert("22222")
+			} */
+			
+			/* if (msg!=null && $('#phone').val()!="") {
+				RemainTime();
+				document.getElementById('yzm').disabled = false;
+			}
+			if ($('#phone').val()=="") {
+				alert("请输入手机号");
+			}  */
+        });
+        
+	};
+	var iTime = 59;
+	var Account;
+	function RemainTime(){
+		document.getElementById('getCaptch').disabled = true;
+		var iSecond,sSecond="",sTime="";
+		if (iTime >= 0){
+			iSecond = parseInt(iTime%60);
+			iMinute = parseInt(iTime/60)
+			if (iSecond >= 0){
+				if(iMinute>0){
+					sSecond = iMinute + "分" + iSecond + "秒";
+				}else{
+					sSecond = iSecond + "秒";
+				}
+			}
+			sTime=sSecond;
+			if(iTime==0){
+				clearTimeout(Account);
+				sTime='请再次获取';
+				document.getElementById('yzm').disabled = true;
+				iTime = 59;
+				document.getElementById('getCaptch').disabled = false;
+				
+				$("#yzm").val("");
+			}else{
+				Account = setTimeout("RemainTime()",1000);
+				iTime=iTime-1;
+			}
+		}else{
+			sTime='没有倒计时';
+		}
+		document.getElementById('getCaptch').value = sTime;
+	}
+	
+	function get_yanzhengma() {
+
+	if ($("#yzm").val()==a) {
+			alert("验证成功")
+		} 
+	};
+</script>
+	
+	
+</html>
